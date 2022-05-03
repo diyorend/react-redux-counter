@@ -2,9 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import App from "./App";
+import GlobalStyles from "./GlobalStyles";
 
 import allReducers from "./reducers";
-import { createStore, combineReducers } from "redux";
+import { createStore } from "redux";
 import { Provider } from "react-redux";
 
 const store = createStore(
@@ -15,6 +16,7 @@ const store = createStore(
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <GlobalStyles />
     <Provider store={store}>
       <App />
     </Provider>
